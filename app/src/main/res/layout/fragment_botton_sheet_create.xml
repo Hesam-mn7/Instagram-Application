@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:paddingBottom="25dp">
+
+    <View
+        android:id="@+id/indicator"
+        style="@style/view_separator"
+        android:layout_marginTop="16dp"
+        android:background="#C8C8C8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Create"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginTop="12dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="17sp"/>
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        style="@style/view2"
+        android:layout_marginTop="15dp"/>
+
+    <TextView
+        android:id="@+id/tvPostt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Post"
+        android:foreground="?attr/selectableItemBackground"
+        android:drawableLeft="@drawable/ic_baseline_grid_on_24"
+        style="@style/textBottomSheetCreate"/>
+
+    <View
+        android:layout_width="match_parent"
+        style="@style/viewCreate"
+        />
+
+    <TextView
+        android:id="@+id/tvStoryy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Story"
+        android:drawableLeft="@drawable/ic_your_activity"
+        style="@style/textBottomSheetCreate"/>
+
+    <View
+        android:layout_width="match_parent"
+        style="@style/viewCreate"
+        />
+    <TextView
+        android:id="@+id/tvStoryHighlight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Story Highlight"
+        android:drawableLeft="@drawable/ic_covid19_info"
+        style="@style/textBottomSheetCreate"/>
+
+    <View
+        android:layout_width="match_parent"
+        style="@style/viewCreate"
+        />
+    <TextView
+        android:id="@+id/tvIGTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="IGTV Video"
+        android:drawableLeft="@drawable/ic_igtv"
+        style="@style/textBottomSheetCreate"/>
+
+    <View
+        android:layout_width="match_parent"
+        style="@style/viewCreate"
+        />
+    <TextView
+        android:id="@+id/tvGuide"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Guide"
+        android:drawableLeft="@drawable/ic_baseline_guide"
+        style="@style/textBottomSheetCreate"/>
+
+    <View
+        android:layout_width="match_parent"
+        style="@style/viewCreate"
+        />
+
+</LinearLayout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+
+    <item >
+
+        <shape android:shape="rectangle"
+
+            >
+
+            <corners android:radius="60dp"
+                android:bottomLeftRadius="35dp"
+                android:bottomRightRadius="35dp"
+                android:topLeftRadius="35dp"
+                android:topRightRadius="35dp"
+                />
+            <solid android:color="@color/black_insta"/>
+
+
+
+
+        </shape>
+
+    </item>
+
+
+</selector>
+
+

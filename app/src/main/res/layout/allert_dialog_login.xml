@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="2dp"
+    android:layout_margin="5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Can't Find Account"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            android:layout_marginTop="30dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/black_100"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginTop="20dp"
+            android:text="We Can't find an account \n with this Username. Try another \n phone number or email, or if \n you don't have an Instagram \n account, you can sign up. "
+            />
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="match_parent"
+            style="@style/view"
+            android:layout_marginTop="30dp"
+            />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvTryAgain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/try_again"
+            android:gravity="center"
+            android:paddingTop="14dp"
+            android:paddingBottom="14dp"
+            android:textColor="@color/insta_blue"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:foreground="?attr/selectableItemBackground"/>
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="match_parent"
+            style="@style/view"
+            />
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvsign"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/sign_up"
+            android:gravity="center"
+            android:paddingTop="14dp"
+            android:paddingBottom="14dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:foreground="?attr/selectableItemBackground"/>
+
+    </LinearLayout>
+
+
+</com.google.android.material.card.MaterialCardView>

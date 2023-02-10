@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".View.Activity.SendNewPostActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="15dp">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/white"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/imgback"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentBottom="true"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:src="@drawable/ic_baseline_arrow_back_24" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/imgsendinsta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="16dp"
+                        android:layout_toRightOf="@id/imgback"
+                        android:gravity="center"
+                        android:text="New Post"
+                        android:textColor="@color/black"
+                        android:textSize="19sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/imgnext"
+                        android:layout_width="30dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginRight="16dp"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:src="@drawable/ic_baseline_done_24" />
+                </RelativeLayout>
+
+            </com.google.android.material.appbar.MaterialToolbar>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/linearEdittext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="16dp"
+                app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+                <ImageView
+                    android:id="@+id/imgPostt"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_launcher_background"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etCaption"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="60dp"
+                    android:background="@android:color/transparent"
+                    android:hint="@string/write_a_caption"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/light_gray"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toRightOf="@id/imgPostt"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:id="@+id/view1"
+                style="@style/view2"
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@id/linearEdittext" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvtag"
+                style="@style/textNewPost"
+                android:layout_width="match_parent"
+                android:text="Tag People"
+                app:layout_constraintTop_toBottomOf="@id/view1" />
+
+            <View
+                android:id="@+id/view2"
+                style="@style/view2"
+                android:layout_width="match_parent"
+                app:layout_constraintTop_toBottomOf="@id/tvtag" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvAddLocation"
+                style="@style/textNewPost"
+                android:layout_width="match_parent"
+                android:text="Add Location"
+                app:layout_constraintTop_toBottomOf="@id/view2" />
+
+            <View
+                android:id="@+id/view3"
+                style="@style/view2"
+                android:layout_width="match_parent"
+                app:layout_constraintTop_toBottomOf="@id/tvAddLocation" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvAlso"
+                style="@style/textNewPost"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Also post to"
+                app:layout_constraintTop_toBottomOf="@id/view3" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvFacebook"
+                style="@style/textNewPost"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Facebook"
+                app:layout_constraintTop_toBottomOf="@id/tvAlso" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvTwitter"
+                style="@style/textNewPost"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Twitter"
+                app:layout_constraintTop_toBottomOf="@id/tvFacebook" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvTumblr"
+                style="@style/textNewPost"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tumblr"
+                app:layout_constraintTop_toBottomOf="@id/tvTwitter" />
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/switchFacebook"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="16dp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvAlso" />
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/switchTwitter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="16dp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvFacebook" />
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/switchTumblr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="16dp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvTwitter" />
+
+            <View
+                android:id="@+id/view4"
+                style="@style/view2"
+                android:layout_width="match_parent"
+                app:layout_constraintTop_toBottomOf="@id/tvTumblr" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:text="Advanced Settings"
+                android:textSize="12sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/view4" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

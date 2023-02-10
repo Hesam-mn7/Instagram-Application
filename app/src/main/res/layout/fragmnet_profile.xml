@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".View.Fragment.ProfileFragment">
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawer_layout_Profile_activity"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layoutDirection="rtl"
+        style="@style/DrawerIconStyle"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="@color/white"
+                    android:elevation="3dp"
+                    android:layoutDirection="rtl"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/createPost"
+                            android:layout_width="23dp"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentRight="true"
+                            android:paddingTop="8dp"
+                            android:paddingBottom="8dp"
+                            android:src="@drawable/icon_new_post" />
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/imglock"
+                            android:layout_width="20dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginLeft="16dp"
+                            android:src="@drawable/ic_outline_lock_24" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/tvUsername"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginLeft="7dp"
+                            android:layout_toRightOf="@id/imglock"
+                            android:gravity="center"
+                            android:text="@string/username"
+                            android:textColor="@color/black_insta"
+                            android:textSize="22sp"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/imgDown"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginLeft="3dp"
+                            android:layout_toRightOf="@id/tvUsername"
+                            android:src="@drawable/chevron_down" />
+                    </RelativeLayout>
+                </androidx.appcompat.widget.Toolbar>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layoutDirection="ltr"
+                    app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+                    <LinearLayout
+                        android:id="@+id/linearProfile"
+                        android:layout_width="match_parent"
+                        android:layout_height="85dp"
+                        android:layout_marginLeft="14dp"
+                        android:layout_marginTop="15dp"
+                        android:orientation="horizontal"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/profilePicUser"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:src="@drawable/nostory" />
+
+                        <LinearLayout
+                            android:id="@+id/linearPost"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:foreground="?attr/selectableItemBackground"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/tvNumberPost"
+                                style="@style/textProfileNumber"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="11" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                style="@style/textProfile"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="1dp"
+                                android:text="@string/posts" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/linearfollowers"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:foreground="?attr/selectableItemBackground"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.textview.MaterialTextView
+                                style="@style/textProfileNumber"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="219" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                style="@style/textProfile"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="1dp"
+                                android:text="@string/followers" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/linearfollowing"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:foreground="?attr/selectableItemBackground"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.textview.MaterialTextView
+                                style="@style/textProfileNumber"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="371" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                style="@style/textProfile"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="1dp"
+                                android:text="@string/following" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/text_name"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/linearProfile" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvBio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="2dp"
+                        android:text="@string/text_bio"
+                        android:textColor="@color/black"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvName" />
+
+                    <LinearLayout
+                        android:id="@+id/linearEdit"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="11dp"
+                        android:layout_marginTop="7dp"
+                        android:layout_marginRight="11dp"
+                        android:orientation="horizontal"
+                        app:layout_constraintTop_toBottomOf="@id/tvBio">
+
+                        <TextView
+                            android:id="@+id/btnEditProfile"
+                            android:layout_width="0dp"
+                            android:layout_height="35dp"
+                            android:layout_gravity="center"
+                            android:layout_margin="3dp"
+                            android:layout_weight="10"
+                            android:background="@drawable/border_edit_profile"
+                            android:foreground="?attr/selectableItemBackground"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="Edit Profile"
+                            android:textColor="@color/black_insta"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="35dp"
+                            android:layout_gravity="center"
+                            android:layout_margin="3dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/border_edit_profile"
+                            android:gravity="center"
+                            android:padding="4dp"
+                            android:src="@drawable/chevron_down" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/tabLayout_profile"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:orientation="horizontal"
+                        app:layout_constraintTop_toBottomOf="@id/linearEdit">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/linearGrid"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:id="@+id/imgGridSelect"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_baseline_grid_on_24"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:id="@+id/imgGridDisSelect"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/ic_baseline_grid_on_dis"
+                                android:visibility="invisible"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <View
+                                android:id="@+id/viewSelect"
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="10dp"
+                                android:background="@color/black"
+                                app:layout_constraintTop_toBottomOf="@id/imgGridSelect" />
+
+                            <View
+                                android:id="@+id/viewDisSelect"
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="10dp"
+                                android:background="#E3E3E3"
+                                android:visibility="invisible"
+                                app:layout_constraintTop_toBottomOf="@id/imgGridSelect" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/linearAccount"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:id="@+id/imgTagUnSelect"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_outline_account_box_24"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:id="@+id/imgTagSelect"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_outline_account_box_select"
+                                android:visibility="invisible"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <View
+                                android:id="@+id/viewUnAccount"
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="10dp"
+                                android:background="#E3E3E3"
+                                app:layout_constraintTop_toBottomOf="@id/imgTagUnSelect" />
+
+                            <View
+                                android:id="@+id/viewAccount"
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="10dp"
+                                android:background="@color/black"
+                                android:visibility="invisible"
+                                app:layout_constraintTop_toBottomOf="@id/imgTagUnSelect" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recycleMyPost"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:paddingBottom="?actionBarSize"
+                        android:visibility="visible"
+                        app:layout_constraintTop_toBottomOf="@id/tabLayout_profile" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/reletive2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="invisible"
+                        app:layout_constraintTop_toBottomOf="@id/tabLayout_profile">
+
+                        <ImageView
+                            android:id="@+id/imgnopost"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_marginTop="100dp"
+                            android:src="@drawable/prof"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center"
+                            android:text="No Post Yet"
+                            android:textColor="@color/black"
+                            android:textSize="24sp"
+                            android:textStyle="bold"
+                            app:layout_constraintTop_toBottomOf="@id/imgnopost" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/nav_view_profile"
+            android:layout_width="270dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:layoutDirection="ltr"
+            app:headerLayout="@layout/layout_nav_details_header"
+            app:menu="@menu/navigation_menu_profile" />
+
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+
+    <FrameLayout
+        android:id="@+id/fragmentDetail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layoutDirection="ltr"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/indicator"
+        style="@style/view_separator"
+        android:layout_marginTop="16dp"
+        android:background="#C8C8C8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvReport"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/report"
+        style="@style/textBottomSheetMore"/>
+    <TextView
+        android:id="@+id/tvnotif"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/turn_on_post_notification"
+        style="@style/textBottomSheetMore"/>
+    <TextView
+        android:id="@+id/tvcopy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/copy_link"
+        style="@style/textBottomSheetMore"/>
+    <TextView
+        android:id="@+id/tvShare"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/share_to"
+        style="@style/textBottomSheetMore"/>
+    <TextView
+        android:id="@+id/tvUnfollow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/unfollow"
+        style="@style/textBottomSheetMore"/>
+    <TextView
+        android:id="@+id/tvMute"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/mute"
+        style="@style/textBottomSheetMore"/>
+
+</LinearLayout>

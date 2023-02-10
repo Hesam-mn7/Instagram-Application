@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home"
+    >
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.alroid.instagramhesam.View.Fragment.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/navigation_explore"
+        android:name="com.alroid.instagramhesam.View.Fragment.ExploreFragment"
+        android:label="fragment_explore"
+        tools:layout="@layout/fragment_explore" />
+    <fragment
+        android:id="@+id/navigation_newpost"
+        android:name="com.alroid.instagramhesam.View.Fragment.NewPostFragment"
+        android:label="fragment_new_post"
+        tools:layout="@layout/fragment_new_post" />
+    <fragment
+        android:id="@+id/navigation_igtv"
+        android:name="com.alroid.instagramhesam.View.Fragment.IGTVFragment"
+        android:label="fragment_igtv"
+        tools:layout="@layout/fragment_igtv" />
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.alroid.instagramhesam.View.Fragment.ProfileFragment"
+        android:label="fragmnet_profile"
+        tools:layout="@layout/fragmnet_profile" />
+
+
+
+
+</navigation>

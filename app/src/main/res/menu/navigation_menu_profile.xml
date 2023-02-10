@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_settings"
+        android:icon="@drawable/ic_baseline_settings_24"
+        android:title="@string/settings" />
+    <item
+        android:id="@+id/nav_archive"
+        android:icon="@drawable/ic_archive"
+        android:title="@string/archive" />
+    <item
+        android:id="@+id/nav_your_activity"
+        android:icon="@drawable/ic_your_activity"
+        android:title="@string/your_activity" />
+    <item
+        android:id="@+id/nav_qr_code"
+        android:icon="@drawable/ic_qr_code"
+        android:title="@string/qr_code" />
+    <item
+        android:id="@+id/nav_saved"
+        android:icon="@drawable/ic_saved_border"
+        android:title="@string/saved" />
+    <item
+        android:id="@+id/nav_close_friends"
+        android:icon="@drawable/ic_close_friends"
+        android:title="@string/close_friends" />
+    <item
+        android:id="@+id/nav_covid19"
+        android:icon="@drawable/ic_covid19_info"
+        android:title="@string/covid_19_information" />
+
+</menu>

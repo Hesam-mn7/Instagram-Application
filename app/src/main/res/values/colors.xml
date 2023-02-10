@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="insta_blue">#0195f7</color>
+
+    <color name="normal_text_color">#727272</color>
+    <color name="stroke_editText_normal">#9A9A9A</color>
+    <color name="light_gray">#BCBCBC</color>
+    <color name="searchBox_light_gray">#ECECEC</color>
+    <color name="border_color_login">#9F9F9F</color>
+    <color name="trans">#00000000</color>
+
+
+    <color name="black_200">#727272</color>
+    <color name="black_100">#9A9A9A</color>
+    <color name="black_insta">#262626</color>
+    <color name="light_igtv">#F6F6F6</color>
+
+
+</resources>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".View.Fragment.NewPostFragment"
+ >
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        android:elevation="3dp"
+        >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            >
+            <ImageView
+                android:id="@+id/imgback"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_close_24"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentTop="true"
+                android:foreground="?attr/selectableItemBackground"
+                />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/imgsendinsta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/imgback"
+                android:text="New Post"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="19sp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="16dp"/>
+
+            <ImageView
+                android:id="@+id/imgnext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_arrow_forward_24"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginRight="16dp"
+                android:foreground="?attr/selectableItemBackground"
+                />
+        </RelativeLayout>
+
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        android:scaleType="centerCrop"
+        android:src="@drawable/add"
+        />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/textAddProfilePic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/image"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:text="Select pic from Gallery"
+        android:layout_margin="20dp"
+        android:textColor="@color/insta_blue"
+        android:textSize="19sp"/>
+
+    <LinearLayout
+        android:id="@+id/navFake"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:orientation="horizontal"/>
+
+    <LinearLayout
+        android:id="@+id/linearBorder"
+        android:layout_width="220dp"
+        android:layout_height="40dp"
+        app:layout_constraintBottom_toTopOf="@id/navFake"
+        app:layout_constraintRight_toRightOf="parent"
+        android:background="@drawable/border_post_story_live"
+        android:layout_marginRight="25dp"
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal"
+        android:elevation="3dp"
+        >
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvPost"
+            android:layout_width="0dp"
+            android:text="POST"
+            android:textColor="@color/white"
+            style="@style/newpostbirder"/>
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvStory"
+            android:layout_width="0dp"
+            android:text="STORY"
+            android:textColor="@color/material_on_primary_disabled"
+            style="@style/newpostbirder"/>
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvLive"
+            android:layout_width="0dp"
+            android:text="LIVE"
+            android:textColor="@color/material_on_primary_disabled"
+            style="@style/newpostbirder"
+            />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/etGetImgId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
